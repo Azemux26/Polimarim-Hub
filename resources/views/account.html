@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- chart diagram -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js" integrity="sha512-G8JE1Xbr0egZE5gNGyUm1fF764iHVfRXshIoUWCTPAbKkkItp/6qal5YAHXrxEu4HNfPTQs6HOu3D5vCGS1j3w==" crossorigin="anonymous"></script>
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img//favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END FAVICON -->
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="main.css" type="text/css">
+	<link rel="stylesheet" href="custom.css" type="text/css">
+
+	<title>Akun di POLIMARIM</title>
+</head>
+<body style="background-image: url(img/lataraccount.png); background-repeat: no-repeat; background-size:cover; background-color: #f7f7fc;">
+	<div class="container pt-4 mb-3">
+		<div class="shadow-sm bg-white rounded">
+			<div class="text-right pt-2 pr-2">
+				<a href="index.html" class="text-danger" data-toggle="tooltip" data-placement="left" title="Keluar"><svg class="bi" width="25" height="25" fill="currentColor">
+					<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#power"/>
+				  </svg></a>
+			</div>
+			<div class="row">
+				<div class="col-md-7">
+					<div class="card border-0">
+						<div class="row no-gutters">
+						  <div class="col-md-3 pl-3 pt-3 pr-3">
+							<img src="img/blog-author 21.png" class="w-100 card-img rounded-circle shadow-sm" alt="author">
+						  </div>
+						  <div class="col-md-9">
+							<div class="card-body">
+							  <h5 class="card-title">Nama Depan</h5>
+							  <p class="card-text">
+								  <small class="text-muted">
+										<svg class="bi mb-1" width="12" height="12" fill="currentColor">
+										<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#calendar-week-fill"/>
+									  </svg> 28 Nopember 1993</small><br>
+								  <small class="text-muted">
+									<svg class="bi mb-1" width="12" height="12" fill="currentColor">
+										<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#phone-fill"/>
+									  </svg> 0812 4293 1116</small>, 
+								  <small class="text-muted">
+									<svg class="bi" width="12" height="12" fill="currentColor">
+										<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#envelope-fill"/>
+									  </svg> sumantri@akba.ac.id</small></p>
+		
+							  <hr>
+							<div class="d-flex flex-row flex-wrap bd-highlight mb-3">
+								<div class="bd-highlight"><a class="btn btn-danger" href="#" role="button">Profile</a></div>
+								<div class="mt-1 pl-3 ml-3 bd-highlight">
+									<a href="#" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Facebook">
+										<!-- <span class="fa-stack">
+												<i class="far fa-circle fa-stack-2x"></i>
+												<i class="fab fa-facebook-f fa-stack-1x"></i>
+										  </span> -->
+										  <img src="node_modules/bootstrap-icons/icons/facebook.svg" alt="" width="27" height="27" title="Bootstrap">
+										</a>
+								</div>
+								<div class="mt-1 bd-highlight ml-3">
+									<a href="#" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Instagram">
+										<!-- <span class="fa-stack">
+												<i class="far fa-circle fa-stack-2x"></i>
+												<i class="fab fa-instagram fa-stack-1x"></i>
+										  </span> -->
+										  <img src="node_modules/bootstrap-icons/icons/instagram.svg" alt="" width="27" height="27" title="Bootstrap">
+										</a>
+								</div>
+								<div class="mt-1 bd-highlight ml-3">
+									<a href="#" class="text-secondary" data-toggle="tooltip" data-placement="top" title="Twitter">
+										<!-- <span class="fa-stack">
+												<i class="far fa-circle fa-stack-2x"></i>
+												<i class="fab fa-twitter fa-stack-1x"></i>
+										  </span> -->
+										  <img src="node_modules/bootstrap-icons/icons/twitter.svg" alt="" width="27" height="27" title="Bootstrap">
+										</a>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<div class="shadow-sm p-3 mb-5 bg-white rounded">
+					<h6 class="text-dark">Dashboard</h6>
+					<div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link text-secondary active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Beranda</a>
+						<a class="nav-link text-secondary" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Testimoni</a>
+						<a class="nav-link text-secondary" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">DKP COC COP</a>
+						<a class="nav-link text-secondary" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Prala</a>
+						
+						<h6 class="text-dark mt-3">Setelan akun</h6>
+						<a class="nav-link text-secondary" id="v-akun-edit-tab" data-toggle="pill" href="#v-akun-edit" role="tab" aria-controls="v-akun-edit" aria-selected="false">Profile info</a>
+
+						<a class="nav-link text-secondary" id="v-ganti-password-tab" data-toggle="pill" href="#v-ganti-password" role="tab" aria-controls="v-ganti-password" aria-selected="false">Password</a>
+
+						<a class="nav-link text-secondary" href="login.html"><svg class="bi mb-1" width="20" height="20" fill="currentColor">
+							<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#power"/>
+						  </svg> Keluar</a>
+				  	</div>
+				</div>
+			</div>
+			<div class="col-9">
+				<div class="shadow-sm p-3 bg-white rounded">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="shadow-sm p-3 mb-1 rounded" style="background-color: #FDFFAB;">
+										<div class="d-flex bd-highlight">
+											<div class="mr-auto bd-highlight">
+												<span style="color:#fddb3a;">
+													<svg class="bi" width="55" height="55" fill="currentColor">
+														<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#people-fill"/>
+													  </svg>
+												</span>
+											</div>
+											<div class="bd-highlight text-right">
+												<small class="text-muted">Pengguna</small>
+												<h4 class="text-dark">500</h4>
+											</div>
+										  </div>
+										  <div class="pt-4">
+											<small class="text-muted">
+												<svg class="bi mb-1" width="12" height="12" fill="currentColor">
+												<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trophy-fill"/>
+											  </svg> Pengguna terdaftar</small>
+										  </div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="shadow-sm p-3 mb-1 rounded" style="background-color: #7AC7C4;">
+										<div class="d-flex bd-highlight">
+											<div class="mr-auto bd-highlight">
+												<span style="color:#056676;">
+													<svg class="bi" width="55" height="55" fill="currentColor">
+														<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#files"/>
+													  </svg>
+												</span>
+											</div>
+											<div class="bd-highlight text-right">
+												<small class="text-muted">Berita publik</small>
+												<h4 class="text-dark">25</h4>
+											</div>
+										  </div>
+										  <div class="pt-4">
+											<small class="text-muted"><svg class="bi mb-1" width="12" height="12" fill="currentColor">
+												<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trophy-fill"/>
+											  </svg> Berita kampus</small>
+										  </div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="shadow-sm p-3 mb-1 rounded" style="background-color: #9896F1;">
+										<div class="d-flex bd-highlight">
+											<div class="mr-auto bd-highlight">
+												<span style="color:#6f4a8e;">
+													<svg class="bi" width="55" height="55" fill="currentColor">
+														<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#exclamation-diamond-fill"/>
+													  </svg>
+												</span>
+											</div>
+											<div class="bd-highlight text-right">
+												<small class="text-muted">Pengumuman</small>
+												<h4 class="text-dark">10</h4>
+											</div>
+										  </div>
+										  <div class="pt-4">
+											<small class="text-muted"><svg class="bi mb-1" width="12" height="12" fill="currentColor">
+												<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trophy-fill"/>
+											  </svg> Terkait informasi</small>
+										  </div>
+									</div>
+								</div>
+							</div>
+							<h5 class="pt-5">Diagram Polimarim</h5>
+							<div class="row pt-3">
+								<div class="col-sm-6">
+									<p class="text-center"><small>Registrasi pengguna</small></p>
+									<canvas id="myChart" width="200" height="200"></canvas>
+								</div>
+								<div class="col-sm-6">
+									<p class="text-center"><small>Peserta DKP COC COP</small></p>
+									<canvas id="lineChart" width="200" height="200"></canvas>
+								</div>
+							</div>
+						</div>
+						<!-- ending dashboard -->
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<h4>Testimoni</h4>
+							<p class="text-secondary">Pengguna hanya bisa membuat satu testimoni saja, masukan testimoni apa saja yang menarik atau sifatnya membangun agar kami dapat memperbaiki dari sisi akademik.</p>
+							<div class="table-responsive-md">
+								<table class="table table-hover">
+									<thead class="bg-danger text-white">
+									  <tr>
+										<th scope="col">#</th>
+										<th scope="col">Judul</th>
+										<th scope="col">Testimoni</th>
+										<th scope="col">Tanggal</th>
+										<th scope="col">Aksi</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row">1</th>
+										<td>Motivasi</td>
+										<td class="w-50">Polimarim sudah bagus hanya saja butuh kekompakan dan kerjasama tim.</td>
+										<td>23 Agustus 2020</td>
+										<td>
+											<a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a>
+										</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  <div class="row">
+									  <div class="col-6 pt-1"><nav aria-label="Page navigation example">
+										<ul class="pagination">
+										  <li class="page-item">
+											<a class="page-link rounded border-0 text-danger" href="#" aria-label="Previous">
+											  <span aria-hidden="true">&laquo;</span>
+											</a>
+										  </li>
+										  <li class="page-item active"><a class="page-link rounded border-0 text-danger" href="#">1</a></li>
+										  <li class="page-item"><a class="page-link rounded border-0 text-danger" href="#">2</a></li>
+										  <li class="page-item"><a class="page-link rounded border-0 text-danger" href="#">3</a></li>
+										  <li class="page-item">
+											<a class="page-link rounded border-0 text-danger" href="#" aria-label="Next">
+											  <span aria-hidden="true">&raquo;</span>
+											</a>
+										  </li>
+										</ul>
+									  </nav>
+									</div>
+									<div class="col-6">
+										<div class="text-right">
+											<a href="#" class="text-danger">
+												<svg class="bi rounded-circle" width="47" height="47" fill="currentColor">
+													<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#plus-circle-fill"/>
+												  </svg>
+											</a>
+										  </div>
+									</div>
+								  </div>
+								  
+							</div>
+						</div>
+						<!-- selesai testimoni --> 
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<h4>DKP COP COC</h4>
+							<p class="text-secondary">Diharapkan peserta DKP COC COP dapat melakukan registrasi online sehigga perhatikan nomor registrasi yang diberikan nanti datanya akan divalidasi oleh panitia sertifikasi.</p>
+							<div class="table-responsive-md">
+								<table class="table table-hover">
+									<thead class="bg-danger text-white">
+									  <tr>
+										<th scope="col">#</th>
+										<th scope="col">No. Daftar</th>
+										<th scope="col">Jenis DKP</th>
+										<th scope="col">Tanggal</th>
+										<th scope="col">Pengesahan</th>
+										<th scope="col">Aksi</th>
+									  </tr>
+									</thead>
+									<tbody>
+									  <tr>
+										<th scope="row">1</th>
+										<td>RS200001</td>
+										<td class="w-25">RADAR Simulator</td>
+										<td>23 Agustus 2020</td>
+										<td>Disahkan</td>
+										<td><a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a></a></td>
+									  </tr>
+									  <tr>
+										<th scope="row">2</th>
+										<td>RS210001</td>
+										<td class="w-25">ARPA Simulator</td>
+										<td>21 Januari 2021</td>
+										<td>Disahkan</td>
+										<td><a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a></a></td>
+									  </tr>
+									  <tr>
+										<th scope="row">3</th>
+										<td>BRM210001</td>
+										<td class="w-25">BRM Simulator
+										</td>
+										<td>21 Januari 2021</td>
+										<td>Disahkan</td>
+										<td><a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a></a></td>
+									  </tr>
+									  <tr>
+										<th scope="row">4</th>
+										<td>ERM210001</td>
+										<td class="w-25">ERM Simulator</td>
+										<td>21 Januari 2021</td>
+										<td>Disahkan</td>
+										<td><a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a></a></td>
+									  </tr>
+									  <tr>
+										<th scope="row">5</th>
+										<td>GMDS210001</td>
+										<td class="w-25">GMDSS Simulator</td>
+										<td>21 Januari 2021</td>
+										<td>Disahkan</td>
+										<td><a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a></a></td>
+									  </tr>
+									  <tr>
+										<th scope="row">6</th>
+										<td>ECDIS210001</td>
+										<td class="w-25">ECDIS Simulator</td>
+										<td>21 Januari 2021</td>
+										<td>Disahkan</td>
+										<td>
+											<a href="#" class="text-dark">
+											<svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#pencil-square"/>
+										  </svg></a> | <a href="#" class="text-dark"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+											<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#trash2"/>
+										  </svg></a>
+										</td>
+									  </tr>
+									</tbody>
+								  </table>
+								  <div class="row">
+									  <div class="col-6 pt-1">
+										  <nav aria-label="Page navigation example">
+										<ul class="pagination">
+										  <li class="page-item">
+											<a class="page-link rounded border-0 text-danger" href="#" aria-label="Previous">
+											  <span aria-hidden="true">&laquo;</span>
+											</a>
+										  </li>
+										  <li class="page-item active"><a class="page-link rounded border-0 text-danger" href="#">1</a></li>
+										  <li class="page-item"><a class="page-link rounded border-0 text-danger" href="#">2</a></li>
+										  <li class="page-item"><a class="page-link rounded border-0 text-danger" href="#">3</a></li>
+										  <li class="page-item">
+											<a class="page-link rounded border-0 text-danger" href="#" aria-label="Next">
+											  <span aria-hidden="true">&raquo;</span>
+											</a>
+										  </li>
+										</ul>
+									  </nav>
+									</div>
+									<div class="col-6">
+										<div class="text-right">
+											<a href="#" class="text-danger" data-toggle="modal" data-target="#exampleModal">
+												<svg class="bi rounded-circle" width="47" height="47" fill="currentColor">
+													<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#plus-circle-fill"/>
+												  </svg>
+											</a>
+											<!-- Modal form COC COP -->
+											<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+												<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+												<div class="modal-content">
+													<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel">Formulir Pendaftaran DKP</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+													</div>
+													<div class="modal-body">
+														<form>
+															<div class="form-row text-left">
+															  <div class="col">
+																  <label for="seafarerID">Seafarer ID</label>
+																<input type="text" class="form-control" placeholder="Seafarer ID">
+															  </div>
+															  <div class="col">
+																<label for="namaLengkap">Nama Lengkap</label>
+																<input type="text" class="form-control" placeholder="Nama Lengkap">
+															  </div>
+															</div>
+															<div class="form-row text-left pt-3">
+																<div class="col">
+																	<label for="tempatLahir">Tempat lahir</label>
+																  <input type="text" class="form-control" placeholder="Tempat lahir">
+																</div>
+																<div class="col">
+																  <label for="tanggalLahir">Tanggal Lahir</label>
+																  <input type="text" class="form-control" placeholder="Tanggal Lahir">
+																</div>
+															  </div>
+															  <h6 class="text-left pt-3">Jenis DKP</h6>
+															  <div class="form-group">
+																<select class="form-control" id="exampleFormControlSelect1">
+																  <option>Radar Simulator</option>
+																  <option>ARPA Simulator</option>
+																  <option>BRM Simulator</option>
+																  <option>ECDIS Simulator</option>
+																  <option>ERM Simulator</option>
+																  <option>GMDSS Simulator</option>
+																</select>
+															  </div>
+															  <h6 class="text-left pt-3">Data KTP/SIM</h6>
+															  <div class="form-row text-left">
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Nama Ibu">
+																</div>
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="No. KTP/SIM">
+																</div>
+															  </div>
+															  <div class="form-row text-left pt-2">
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Alamat sekarang">
+																</div>
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Kecamatan">
+																</div>
+															  </div>
+															  <div class="form-row text-left pt-2">
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Kabupaten/Kota">
+																</div>
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="RT/RW">
+																</div>
+															  </div>
+															  <div class="form-row text-left pt-2">
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Propinsi">
+																</div>
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Kode Pos">
+																</div>
+															  </div>
+															  <div class="form-row text-left pt-2">
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="Email">
+																</div>
+																<div class="col">
+																  <input type="text" class="form-control" placeholder="No. HP/Tlp">
+																</div>
+															  </div>
+															  <h6 class="text-left pt-3">Upload berkas pendukung</h6>
+															  <div class="card py-3 px-2">
+																<div class="form-row text-left">
+																	<div class="col">
+																		<label for="customFile">Scan warna BST</label>
+																		<input type="file" class="form-control-file" id="customFile">
+																	</div>
+																	<div class="col">
+																		<label for="customFile">Scan warna KTP/SIM</label>
+																		<input type="file" class="form-control-file" id="customFile">
+																	</div>
+																  </div>
+																  <hr>
+																  <div class="form-row text-left">
+																	<div class="col">
+																		<label for="customFile">Scan warna Foto</label>
+																		<input type="file" class="form-control-file" id="customFile">
+																		<small class="form-text text-muted">Latar biru dan merah untuk Studi Nautika dan Permesinan Kapal, kemeja putih berdasi hitam.</small>
+																	</div>
+																	<div class="col">
+																		<label for="customFile">Scan warna KTP/SIM</label>
+																		<input type="file" class="form-control-file" id="customFile">
+																	</div>
+																  </div>
+															  </div>
+														  </form>
+													</div>
+													<div class="modal-footer">
+													<button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+													<button type="button" class="btn btn-danger">Kirim Formulir</button>
+													</div>
+												</div>
+												</div>
+											</div>
+											<!-- selesai modal form COC COP -->	
+										  </div>
+									</div>
+								  </div>
+							</div>
+						</div>
+						<!-- selesai DKP COC COP -->
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+						<div class="tab-pane fade" id="v-akun-edit" role="tabpanel" aria-labelledby="v-akun-edit-tab">
+							<h4 class="pb-2">Profil Informasi</h4>
+							<form>
+								<div class="shadow-sm pt-3 pb-4 rounded" style="background-color: #f7f7fc;">
+										<div class="row no-gutters">
+										  <div class="col-md-3 pl-5 pt-2">
+											<img src="img/blog-author 21.png" class="w-75 card-img rounded-circle shadow-sm" alt="...">
+										  </div>
+										  <div class="col-md-9 pt-4">
+												<div class="form-group">
+													<input type="file" class="form-control-file" id="exampleFormControlFile1">
+												  </div>
+											  <p>
+												  <small class="text-muted">Unggah gambar JPG or PNG. 300 x 300 yang dibutuhkan.</small></p>
+										  </div>
+										</div>
+								</div>
+								<div class="form-row pt-4">
+								  <div class="form-group col-md-6">
+									<label for="inputEmail4">Email</label>
+									<input type="email" class="form-control" id="inputEmail4">
+								  </div>
+								  <div class="form-group col-md-6">
+									<label for="inputPassword4">Password</label>
+									<input type="password" class="form-control" id="inputPassword4">
+								  </div>
+								</div>
+								<div class="form-group">
+								  <label for="inputAddress">Address</label>
+								  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+								</div>
+								<div class="form-group">
+								  <label for="inputAddress2">Address 2</label>
+								  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+								</div>
+								<div class="form-row">
+								  <div class="form-group col-md-6">
+									<label for="inputCity">City</label>
+									<input type="text" class="form-control" id="inputCity">
+								  </div>
+								  <div class="form-group col-md-4">
+									<label for="inputState">State</label>
+									<select id="inputState" class="form-control">
+									  <option selected>Choose...</option>
+									  <option>...</option>
+									</select>
+								  </div>
+								  <div class="form-group col-md-2">
+									<label for="inputZip">Zip</label>
+									<input type="text" class="form-control" id="inputZip">
+								  </div>
+								</div>
+								<!-- <div class="form-group">
+								  <div class="form-check">
+									<input class="form-check-input" type="checkbox" id="gridCheck">
+									<label class="form-check-label" for="gridCheck">
+									  Check me out
+									</label>
+								  </div>
+								</div> -->
+								<div class="text-right">
+									<button type="submit" class="btn btn-danger"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
+										<use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#cursor-fill"/>
+									  </svg> Simpan perubahan</button>
+								</div>
+							  </form>
+						</div>
+						<!-- selesai profile informasi -->
+						<div class="tab-pane fade" id="v-ganti-password" role="tabpanel" aria-labelledby="v-ganti-password-tab">ganti password</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FOOTER -->
+	<div class="container">
+		<div class="row">
+            <div class="col-md-8 mt-4">
+              <ul class="list-inline text-secondary">
+                <li class="list-inline-item">Hak cipta: 2016 - 2020, Politeknik Maritim AMI Makassar - Sulawesi Selatan.</li>
+              </ul>
+            </div>
+            <div class="col-md-4 text-right mt-4 mb-1">
+              <ul class="list-inline text-secondary text-right">
+                <li class="list-inline-item">Kontak</li>
+                <li class="list-inline-item l-5">Rahasia akun</li>
+              </ul>
+            </div>
+          </div>
+	</div>
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="node_modules/bootstrap/js/dist/jquery.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Umum', 'Taruna', 'MP', 'PK', 'SN', 'TL'],
+				datasets: [{
+					label: '# of Votes',
+					data: [15, 100, 20, 15, 17, 10],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			}
+		});
+
+		var ctx = document.getElementById('lineChart').getContext('2d');
+		var lineChart = new Chart(ctx, {
+			type: 'pie',
+			data: {
+				labels: ['RADAR', 'ARPA', 'BRM', 'ECDIS', 'ERM', 'GMDSS'],
+				datasets: [{
+					label: '# of Votes',
+					data: [100, 50, 10, 5, 2, 3],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)'
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)',
+						'rgba(255, 159, 64, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			// options: {
+			// 	scales: {
+			// 		yAxes: [{
+			// 			ticks: {
+			// 				beginAtZero: true
+			// 			}
+			// 		}]
+			// 	}
+			// }
+		});
+		</script>		
+</body>
+</html>

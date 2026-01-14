@@ -1,0 +1,35 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+
+
+$body-bg: #ffffff;
+$body-color: #111;
+
+$theme-colors: (
+  "primary": #4072AF,
+  "danger": #A1274F,
+  "warning": #DBE2EF,
+);
+
+$border-radius: 13px;
+$carousel-indicator-active-bg: #4072AF;
+$carousel-indicator-width: 20px;
+$carousel-indicator-height: 20px;
+$nav-tabs-link-hover-border-color: #ffffff;
+$nav-tabs-link-active-border-color: #ffffff;
+$navbar-light-color: #353b41;
+$navbar-light-hover-color: #4072AF;
+$navbar-light-active-color: #4072AF;
+$breadcrumb-divider: quote(">");
+$pagination-active-bg: #DBE2EF;
+$nav-tabs-border-color: none;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1340px
+) !default;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
