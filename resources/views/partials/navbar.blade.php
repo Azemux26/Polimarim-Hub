@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light font-weight-bold">
     <div class="container">
-        <a href="login.html" data-filetype="masuk"
+        <a href="/admin" data-filetype="masuk"
             class="d-block d-sm-none btn btn-link text-dark mr-3 text-decoration-none masukan-akun font-weight-bold"
             type="submit">
             <svg class="bi mb-1" width="17" height="17" fill="currentColor">
@@ -68,7 +68,7 @@
                 </li> --}}
             </ul>
             <li class="nav-item ml-2 d-none d-md-block">
-                <a href="login.html"
+                <a href="/admin"
                     class="d-none d-md-block btn btn-link text-dark mr-2 text-decoration-none masukan-akun font-weight-bold"
                     type="submit">
                     <svg class="bi mb-1" width="17" height="17" fill="currentColor">

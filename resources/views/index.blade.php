@@ -4,7 +4,6 @@
 
 {{-- HEADER --}}
 @include('partials.header')
-
 <!-- KABAR BERITA -->
   <section class="container-fluid mt-4">
     <div class="container">

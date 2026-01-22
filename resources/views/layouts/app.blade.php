@@ -14,7 +14,7 @@
     'resources/sass/main.scss',
     'resources/css/main.css',
     'resources/css/custom.css',
-    'resources/js/app.js'
+    
 ])
 
 </head>
