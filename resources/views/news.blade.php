@@ -148,68 +148,77 @@
 
     <!------- BERITA TERBARU ----------->
     <section class="container-fluid">
-    <div class="container mt-4">
-        <div class="row mt-3">
-            <div class="col-md-6">
-                <div class="card border-0 mb-3">
-                    @if(isset($latestNews[0]))
-                        {{-- Perbaikan: Gambar diambil dari tabel news, bukan category --}}
-                        <img src="{{ asset('storage/' . $latestNews[0]->image) }}" class="card-img-top rounded img-fluid" style="height: 350px; object-fit: cover;" alt="...">
-                        <div class="card-body">
-                            {{-- Badge Kategori Utama Berita --}}
-                            @if($latestNews[0]->category)
-                                <a href="{{ route('news.category', $latestNews[0]->category->slug) }}" class="badge badge-primary mb-3 label-judul">
-                                    {{ $latestNews[0]->category->name }}
-                                </a>
-                            @endif
-
-                            {{-- Badge Kategori Lainnya --}}
-                            @foreach($allCategories as $cat)
-                                @if($latestNews[0]->category_id != $cat->id)
-                                    <a href="{{ route('news.category', $cat->slug) }}" class="badge badge-secondary mb-3 label-judul">
-                                        {{ $cat->name }}
+        <div class="container mt-4">
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="card border-0 mb-3">
+                        @if (isset($latestNews[0]))
+                            {{-- Perbaikan: Gambar diambil dari tabel news, bukan category --}}
+                            <img src="{{ asset('storage/' . $latestNews[0]->image) }}"
+                                class="card-img-top rounded img-fluid" style="height: 350px; object-fit: cover;"
+                                alt="...">
+                            <div class="card-body">
+                                {{-- Badge Kategori Utama Berita --}}
+                                @if ($latestNews[0]->category)
+                                    <a href="{{ route('news.category', $latestNews[0]->category->slug) }}"
+                                        class="badge badge-primary mb-3 label-judul">
+                                        {{ $latestNews[0]->category->name }}
                                     </a>
                                 @endif
-                            @endforeach
-                            
-                            <a href="{{ route('news.show', $latestNews[0]->slug) }}" class="text-dark">
-                                <h5 class="card-title">{{ $latestNews[0]->title }}</h5>
-                            </a>
-                            <a href="{{ route('news.show', $latestNews[0]->slug) }}" class="text-dark">
-                                <p class="card-text">{{ Str::limit(strip_tags($latestNews[0]->content), 150) }}</p>
-                            </a>
-                            <p class="card-text"><small class="text-muted"><svg class="bi mb-1" width="15" height="15" fill="currentColor">
-                                <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
-                            </svg> {{ $latestNews[0]->created_at->diffForHumans() }}, Admin</small></p>
-                        </div>
-                    @endif
-                </div>
-            </div>
 
-            <div class="col-md-6 sr-card">
-                <div class="row no-gutters">
-                    @foreach($latestNews->skip(1)->take(4) as $lNews)
-                        <div class="col-md-6 sr-card pr-3 pb-3">
-                            <img src="{{ asset('storage/' . $lNews->image) }}" class="card-img-top rounded img-fluid" style="height: 120px; object-fit: cover;" alt="...">
-                        </div>
-                        <div class="col-md-6 sr-card">
-                            @if($lNews->category)
-                                <small class="text-primary font-weight-bold">{{ $lNews->category->name }}</small>
-                            @endif
-                            
-                            <h6><a href="{{ route('news.show', $lNews->slug) }}" class="text-dark">{{ Str::limit($lNews->title, 60) }}</a></h6>
-                            <p class="text-secondary"><small><svg class="bi mb-1" width="13" height="13" fill="currentColor">
-                                <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#calendar-event-fill') }}" />
-                            </svg> {{ $lNews->created_at->format('d M Y') }}</small></p>
-                            <hr>
-                        </div>
-                    @endforeach
+                                {{-- Badge Kategori Lainnya --}}
+                                @foreach ($allCategories as $cat)
+                                    @if ($latestNews[0]->category_id != $cat->id)
+                                        <a href="{{ route('news.category', $cat->slug) }}"
+                                            class="badge badge-secondary mb-3 label-judul">
+                                            {{ $cat->name }}
+                                        </a>
+                                    @endif
+                                @endforeach
+
+                                <a href="{{ route('news.show', $latestNews[0]->slug) }}" class="text-dark">
+                                    <h5 class="card-title">{{ $latestNews[0]->title }}</h5>
+                                </a>
+                                <a href="{{ route('news.show', $latestNews[0]->slug) }}" class="text-dark">
+                                    <p class="card-text">{{ Str::limit(strip_tags($latestNews[0]->content), 150) }}</p>
+                                </a>
+                                <p class="card-text"><small class="text-muted"><svg class="bi mb-1" width="15"
+                                            height="15" fill="currentColor">
+                                            <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
+                                        </svg> {{ $latestNews[0]->created_at->diffForHumans() }}, Admin</small></p>
+                            </div>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="col-md-6 sr-card">
+                    <div class="row no-gutters">
+                        @foreach ($latestNews->skip(1)->take(4) as $lNews)
+                            <div class="col-md-6 sr-card pr-3 pb-3">
+                                <img src="{{ asset('storage/' . $lNews->image) }}" class="card-img-top rounded img-fluid"
+                                    style="height: 120px; object-fit: cover;" alt="...">
+                            </div>
+                            <div class="col-md-6 sr-card">
+                                @if ($lNews->category)
+                                    <small class="text-primary font-weight-bold">{{ $lNews->category->name }}</small>
+                                @endif
+
+                                <h6><a href="{{ route('news.show', $lNews->slug) }}"
+                                        class="text-dark">{{ Str::limit($lNews->title, 60) }}</a></h6>
+                                <p class="text-secondary"><small><svg class="bi mb-1" width="13" height="13"
+                                            fill="currentColor">
+                                            <use
+                                                xlink:href="{{ asset('build/assets/bootstrap-icons.svg#calendar-event-fill') }}" />
+                                        </svg> {{ $lNews->created_at->format('d M Y') }}</small></p>
+                                <hr>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!------- END BERITA TERBARU ----------->
+    </section>
+    <!------- END BERITA TERBARU ----------->
 
     <!-- BARITA AUDIT EKSTERNAL -->
     <section class="container-fluid">
@@ -220,78 +229,49 @@
                 </div>
                 <div class="col-md-6 text-right">
                     <a href="#" class="text-decoration-none text-secondary">
-                        <span">Lihat semua berita <svg class="bi mb-0" width="15" height="15"
-                                fill="currentColor">
+                        <span>Lihat semua berita <svg class="bi mb-0" width="15" height="15" fill="currentColor">
                                 <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#chevron-double-right') }}" />
                             </svg></span>
                     </a>
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-3 sr-card">
-                    <div class="card border-0 mb-3">
-                        <img src="{{ asset('img/blog-1 3.jpg') }}" class="card-img-top rounded img-fluid"
-                            alt="...">
-                        <div class="card-body">
-                            <a href="#" class="text-dark">
-                                <h5 class="card-title">Judul berita tetang audit eksternal</h5>
-                            </a>
-                            <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
-                            <p class="card-text"><small class="card-text text-muted"><svg class="bi mb-1" width="15"
-                                        height="15" fill="currentColor">
-                                        <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
-                                    </svg> Last updated 3 mins ago, Author</small></p>
+                @forelse ($auditNews as $news)
+                    <div class="col-md-3 sr-card">
+                        <div class="card border-0 mb-3">
+                            <img src="{{ asset('storage/' . $news->image) }}" class="card-img-top rounded img-fluid"
+                                alt="{{ $news->title }}">
+                            <div class="card-body">
+                                <a href="{{ route('news.show', $news->slug) }}" class="text-dark">
+                                    <h5 class="card-title">{{ Str::limit($news->title, 60) }}</h5>
+                                </a>
+                                <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
+                                <p class="card-text"><small class="card-text text-muted"><svg class="bi mb-1"
+                                            width="15" height="15" fill="currentColor">
+                                            <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
+                                        </svg> {{ $news->created_at->diffForHumans() }},
+                                        {{ $news->author ?? 'Admin' }}</small></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 sr-card">
-                    <div class="card border-0 mb-3">
-                        <img src="{{ asset('img/blog-1 3.jpg') }}" class="card-img-top rounded img-fluid"
-                            alt="...">
-                        <div class="card-body">
-                            <a href="#" class="text-dark">
-                                <h5 class="card-title">Judul berita tetang audit eksternal</h5>
-                            </a>
-                            <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
-                            <p class="card-text"><small class="text-muted"><svg class="bi mb-1" width="15"
-                                        height="15" fill="currentColor">
-                                        <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
-                                    </svg> Last updated 3 mins ago, Author</small></p>
+                @empty
+                    <div class="col-md-3 sr-card">
+                        <div class="card border-0 mb-3">
+                            <img src="{{ asset('img/blog-1 3.jpg') }}" class="card-img-top rounded img-fluid"
+                                alt="...">
+                            <div class="card-body">
+                                <a href="#" class="text-dark">
+                                    <h5 class="card-title">Judul berita tetang audit eksternal</h5>
+                                </a>
+                                <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
+                                <p class="card-text"><small class="card-text text-muted"><svg class="bi mb-1"
+                                            width="15" height="15" fill="currentColor">
+                                            <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
+                                        </svg> Last updated 3 mins ago, Author</small></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 sr-card">
-                    <div class="card border-0 mb-3">
-                        <img src="{{ asset('img/blog-1 3.jpg') }}" class="card-img-top rounded img-fluid"
-                            alt="...">
-                        <div class="card-body">
-                            <a href="#" class="text-dark">
-                                <h5 class="card-title">Judul berita tetang audit eksternal</h5>
-                            </a>
-                            <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
-                            <p class="card-text"><small class="text-muted"><svg class="bi mb-1" width="15"
-                                        height="15" fill="currentColor">
-                                        <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
-                                    </svg> Last updated 3 mins ago, Author</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 sr-card">
-                    <div class="card border-0 mb-3">
-                        <img src="{{ asset('img/blog-1 3.jpg') }}" class="card-img-top rounded img-fluid"
-                            alt="...">
-                        <div class="card-body">
-                            <a href="#" class="text-dark">
-                                <h5 class="card-title">Judul berita tetang audit eksternal</h5>
-                            </a>
-                            <!-- <a href="#" class="text-dark"><p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p></a> -->
-                            <span class="card-text"><small class="text-muted"><svg class="bi mb-1" width="15"
-                                        height="15" fill="currentColor">
-                                        <use xlink:href="{{ asset('build/assets/bootstrap-icons.svg#clock') }}" />
-                                    </svg> Last updated 3 mins ago, Author</small></span>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
         </div>
     </section>
