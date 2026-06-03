@@ -33,10 +33,10 @@
                     <a class="nav-link" href="/">BERANDA <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item ml-1">
-                    <a class="nav-link" href="/about">TENTANG</a>
+                    <a class="nav-link" href="/tentang">TENTANG</a>
                 </li>
                 <li class="nav-item ml-1">
-                    <a class="nav-link" href="/news">BERITA</a>
+                    <a class="nav-link" href="/berita">BERITA</a>
                 </li>
                 <li class="nav-item dropdown ml-1">
                     <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -52,11 +52,11 @@
                         <a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> SISLEKCATAR</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> DIKTRAMPEL</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="/leader"><i class="fas fa-angle-right"></i> PEMIMPIN</a>
+                        <a class="dropdown-item" href="/pimpinan"><i class="fas fa-angle-right"></i> PEMIMPIN</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item active" href="/galeri"><i class="fas fa-angle-right"></i>
                             GALERI</a>
-                        <a class="dropdown-item" href="/unduh"><i class="fas fa-angle-right"></i> UNDUH</a>
+                        <a class="dropdown-item" href="/unduhan"><i class="fas fa-angle-right"></i> UNDUH</a>
                     </div>
                 </li>
                 {{-- <li class="nav-item ml-2 d-none d-md-block">

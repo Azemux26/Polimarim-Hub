@@ -3,19 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcment;
+use Illuminate\View\View;
 
 class AnnouncmentController extends Controller
 {
-    /**
-     * Halaman detail satu pengumuman: /pengumuman/{slug}
-     */
-    public function show(string $slug)
+    public function show(Announcment $announcement): View
     {
-        $announcement = Announcment::where('slug', $slug)->firstOrFail();
-
-        // Pengumuman aktif lainnya (selain yang sedang dilihat)
-        $otherAnnouncements = Announcment::active()
+        $otherAnnouncements = Announcment::query()
             ->where('id', '!=', $announcement->id)
+            ->active()
             ->take(3)
             ->get();
 

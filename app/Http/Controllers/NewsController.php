@@ -2,30 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\News;
 use App\Models\Category;
+use App\Models\News;
+use Illuminate\View\View;
 
 class NewsController extends Controller
 {
-    public function index(?string $slug = null)
+    public function index(?string $slug = null): View
     {
-        // Gunakan scope published() yang sudah ada di model
-        $popularNews = News::published()->with('category')->take(5)->get();
+        /*
+         * Model News belum memiliki kolom view_count/is_featured.
+         * Karena itu, bagian "popularNews" masih memakai berita published terbaru.
+         */
+        $popularNews = News::published()
+            ->with('category')
+            ->take(5)
+            ->get();
 
-        $allCategories = Category::all();
-        $category      = null;
+        $allCategories = Category::hasPublishedNews()
+            ->orderBy('name')
+            ->get();
 
-        $latestNewsQuery = News::published()->with('category');
+        $category = null;
 
-        if ($slug) {
+        $latestNewsQuery = News::published()
+            ->with('category');
+
+        if ($slug !== null) {
             $category = Category::where('slug', $slug)->firstOrFail();
             $latestNewsQuery->where('category_id', $category->id);
         }
 
-        $latestNews = $latestNewsQuery->paginate(10);
+        $latestNews = $latestNewsQuery
+            ->paginate(10)
+            ->withQueryString();
 
         $auditNews = News::published()
-            ->whereHas('category', fn (object $q) => $q->where('name', 'Audit Eksternal'))
+            ->with('category')
+            ->whereHas('category', function ($query): void {
+                $query->where('name', 'Audit Eksternal');
+            })
             ->take(4)
             ->get();
 
@@ -34,7 +50,7 @@ class NewsController extends Controller
             'latestNews',
             'auditNews',
             'allCategories',
-            'category',
+            'category'
         ));
     }
 }

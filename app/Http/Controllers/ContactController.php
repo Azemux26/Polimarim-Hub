@@ -2,33 +2,33 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ContactController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         return view('contact');
     }
 
-    /**
-     * Handle form kirim pesan dari halaman kontak.
-     * Saat ini hanya redirect balik dengan pesan sukses.
-     * Nanti bisa disambungkan ke Mail atau Notification.
-     */
-    public function send(Request $request)
+    public function send(Request $request): RedirectResponse
     {
-        $request->validate([
-            'nama'    => ['required', 'string', 'max:100'],
-            'email'   => ['required', 'email'],
-            'subjek'  => ['required', 'string', 'max:200'],
-            'pesan'   => ['required', 'string'],
+        $validated = $request->validate([
+            'nama'   => ['required', 'string', 'max:100'],
+            'email'  => ['required', 'email', 'max:150'],
+            'subjek' => ['required', 'string', 'max:200'],
+            'pesan'  => ['required', 'string', 'max:2000'],
         ]);
 
-        // TODO: kirim email ke admin menggunakan Mail::to(...)
-        // Mail::to(config('mail.admin_address'))->send(new ContactMail($request->all()));
-
-        return redirect()->route('contact')
+        /*
+         * Data sudah tervalidasi.
+         * Nanti sebelum masuk production, bagian ini bisa disambungkan
+         * ke Mail, Notification, atau tabel contact_messages.
+         */
+        return redirect()
+            ->route('contact')
             ->with('success', 'Pesan Anda berhasil dikirim. Kami akan merespons dalam 2 hari kerja.');
     }
 }
