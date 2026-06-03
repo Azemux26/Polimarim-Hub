@@ -47,7 +47,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <!-- <a class="dropdown-item" href="news.html"><i class="fas fa-angle-right"></i> BERITA</a> -->
-                        <a class="dropdown-item" href="/pengumuman"><i class="fas fa-angle-right"></i> PENGUMUMAN</a>
+                        <a class="dropdown-item" href="/agenda"><i class="fas fa-angle-right"></i> PENGUMUMAN</a>
                         <a class="dropdown-item" href="/kontak"><i class="fas fa-angle-right"></i> KONTAK</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> SISLEKCATAR</a>
                         <a class="dropdown-item" href="#"><i class="fas fa-angle-right"></i> DIKTRAMPEL</a>
