@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
-use Illuminate\Http\Request;
 
 class ShowNewsController extends Controller
 {
-    public function show($slug)
+    public function show(string $slug)
     {
-        // Mencari berita yang slug-nya cocok DAN statusnya published
-        $news = News::where('slug', $slug)
-                    ->where('is_published', 'published')
-                    ->firstOrFail(); // Munculkan 404 jika slug salah
+        $news = News::published()->with('category')->where('slug', $slug)->firstOrFail();
 
-        return view('show_news', compact('news'));
+        $relatedNews = News::published()
+            ->with('category')
+            ->where('category_id', $news->category_id)
+            ->where('id', '!=', $news->id)
+            ->take(4)
+            ->get();
+
+        return view('show_news', compact('news', 'relatedNews'));
     }
 }
